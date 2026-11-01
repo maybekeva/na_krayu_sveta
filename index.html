@@ -139,30 +139,30 @@
       <div class="absolute top-[60%] -right-36 w-[620px] h-[620px] bg-theatre-brand/35 rounded-full blur-[160px]"></div>
     </div>
 
-    <!-- 1. ХЕДЕР (Sticky Navigation Bar с новым логотипом) -->
+    <!-- 1. ХЕДЕР (Sticky Navigation Bar - строго фиксированная разметка без переносов и сдвигов) -->
     <header class="sticky top-0 z-40 w-full bg-theatre-950/95 backdrop-blur-md border-b border-theatre-700/60 transition-all duration-300">
-      <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-2 sm:gap-4">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-2 sm:gap-4">
         
         <!-- Brand: Official Logo + Title НА КРАЮ СВЕТА -->
-        <a href="#" class="group flex items-center gap-2.5 sm:gap-3 shrink-0 min-w-0">
-          <div class="h-11 sm:h-13 py-0.5 shrink-0 flex items-center">
+        <a href="#" class="group flex items-center gap-2 sm:gap-3 shrink-0 min-w-0">
+          <div class="h-10 sm:h-12 py-0.5 shrink-0 flex items-center">
             <img 
               src="assets/aistudio/image_3009b03e.png" 
               alt="Театр клоунады На Краю Света" 
               class="h-full w-auto object-contain rounded-lg shadow-sm border border-amber-500/30 group-hover:scale-105 transition-transform"
             />
           </div>
-          <div class="min-w-0">
-            <div class="font-display font-bold text-base sm:text-lg lg:text-xl tracking-tight text-white group-hover:text-amber-300 transition-colors whitespace-nowrap">
+          <div class="min-w-0 flex flex-col justify-center">
+            <div class="font-display font-bold text-sm sm:text-lg lg:text-xl tracking-tight text-white group-hover:text-amber-300 transition-colors whitespace-nowrap">
               НА КРАЮ СВЕТА
             </div>
-            <div class="text-[10px] sm:text-xs text-slate-400 font-light tracking-wide truncate max-w-[190px] sm:max-w-none">
+            <div class="text-[10px] sm:text-xs text-slate-400 font-light tracking-wide truncate max-w-[130px] xs:max-w-[180px] sm:max-w-none">
               Первый театр клоунады в Нижнем Новгороде
             </div>
           </div>
         </a>
 
-        <!-- Desktop Navigation: Все ссылки в одну строку без переносов (whitespace-nowrap shrink-0) -->
+        <!-- Desktop Navigation: Все ссылки в одну строку без переносов -->
         <nav class="hidden lg:flex items-center gap-5 xl:gap-7 text-sm font-medium text-slate-200">
           <a href="#about" class="whitespace-nowrap shrink-0 hover:text-amber-300 transition-colors py-1">О театре</a>
           <a href="#afisha" class="whitespace-nowrap shrink-0 hover:text-amber-300 transition-colors py-1">Афиша спектаклей</a>
@@ -172,8 +172,8 @@
           <a href="#contacts" class="whitespace-nowrap shrink-0 hover:text-amber-300 transition-colors py-1">Контакты</a>
         </nav>
 
-        <!-- Right Side: Телефон + Кнопка «Купить билет» (не сдвигается и не вылезает за экран) -->
-        <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+        <!-- Right Side: Телефон + Кнопка «Купить билет» + Гамбургер строго у правого края -->
+        <div class="flex items-center gap-2 sm:gap-3 shrink-0 ml-auto lg:ml-0">
           <a href="tel:+79159414249" class="hidden xl:flex flex-col text-right group pr-1">
             <span class="text-[11px] text-slate-400 group-hover:text-slate-300">Касса и бронь</span>
             <span class="text-xs font-semibold text-slate-200 group-hover:text-amber-300 transition-colors whitespace-nowrap">
@@ -181,17 +181,19 @@
             </span>
           </a>
 
-          <button onclick="openBookingModal('Любой спектакль')" class="whitespace-nowrap shrink-0 px-3 py-2 sm:px-4 sm:py-2.5 rounded-xl bg-gradient-to-r from-amber-500 via-amber-400 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-bold text-xs sm:text-sm shadow-md shadow-amber-500/25 hover:shadow-amber-500/40 hover:-translate-y-0.5 transition-all duration-200 active:translate-y-0 flex items-center gap-1.5 border border-amber-300/40">
-            <svg class="w-4 h-4 shrink-0 text-slate-950" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <!-- Ticket Button -->
+          <button onclick="openBookingModal('Любой спектакль')" class="whitespace-nowrap shrink-0 px-2.5 py-1.5 sm:px-4 sm:py-2.5 rounded-xl bg-gradient-to-r from-amber-500 via-amber-400 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-bold text-xs sm:text-sm shadow-md shadow-amber-500/25 hover:shadow-amber-500/40 hover:-translate-y-0.5 transition-all duration-200 active:translate-y-0 flex items-center gap-1.5 border border-amber-300/40">
+            <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 text-slate-950" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" />
             </svg>
             <span class="hidden sm:inline">Купить билет</span>
-            <span class="sm:hidden">Билеты</span>
+            <span class="sm:hidden text-[11px]">Билеты</span>
           </button>
 
-          <button id="mobileMenuBtn" aria-label="Открыть меню навигации" class="lg:hidden p-2 text-slate-300 hover:text-white rounded-xl hover:bg-theatre-850 transition-colors shrink-0">
-            <svg id="menuIcon" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          <!-- Mobile Hamburger Button: четко фиксирован справа, идеальный квадратный тач-таргет -->
+          <button id="mobileMenuBtn" aria-label="Открыть меню навигации" class="lg:hidden w-10 h-10 flex items-center justify-center text-slate-200 hover:text-white rounded-xl bg-theatre-850/90 hover:bg-theatre-800 border border-theatre-700/80 transition-colors shrink-0">
+            <svg id="menuIcon" class="w-5 h-5 block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 6h16M4 12h16M4 18h16"/>
             </svg>
           </button>
         </div>
@@ -1167,67 +1169,73 @@
       </div>
     </footer>
 
-    <!-- Interactive Ticket Booking Modal -->
-    <div id="bookingModal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-slate-950/85 backdrop-blur-md flex items-center justify-center p-4">
-      <div class="relative w-full max-w-lg rounded-3xl bg-theatre-900 border-2 border-theatre-700/80 p-6 sm:p-8 shadow-theatre-card space-y-5">
+    <!-- Interactive Ticket Booking Modal (Strictly Centered on Mobile & Desktop) -->
+    <div id="bookingModal" class="hidden fixed inset-0 z-50 overflow-x-hidden overflow-y-auto bg-black/80 backdrop-blur-md p-3 sm:p-6" style="-webkit-overflow-scrolling: touch;">
+      <!-- Centering flex wrapper with backdrop click-to-close -->
+      <div class="min-h-full w-full flex items-center justify-center py-6" onclick="if(event.target === this) closeBookingModal()">
         
-        <button onclick="closeBookingModal()" class="absolute top-5 right-5 text-slate-400 hover:text-white p-2 rounded-xl hover:bg-theatre-800 transition-colors">
-          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-
-        <div class="space-y-1">
-          <span class="text-xs text-amber-400 font-semibold uppercase tracking-wider font-hand text-base">Бронирование билетов</span>
-          <h3 id="modalPerformanceTitle" class="font-display text-xl sm:text-2xl font-bold text-white">
-            Спектакль «Домовой»
-          </h3>
-          <p id="modalPerformanceDate" class="text-xs text-slate-300">
-            Показ: 15 ноября (Сб) в 16:00
-          </p>
-        </div>
-
-        <!-- Ticket Counter -->
-        <div class="p-4 rounded-2xl bg-theatre-950 border border-theatre-800 space-y-3">
-          <div class="flex items-center justify-between">
-            <div>
-              <div class="text-xs font-semibold text-slate-200">Количество мест</div>
-              <div class="text-[11px] text-slate-400">Свободная рассадка в зале на 40 мест</div>
-            </div>
-            
-            <div class="flex items-center gap-3">
-              <button type="button" onclick="changeTicketCount(-1)" class="w-8 h-8 rounded-lg bg-theatre-800 hover:bg-theatre-700 text-white font-bold text-sm flex items-center justify-center border border-theatre-700">
-                -
-              </button>
-              <span id="ticketCountDisplay" class="font-display font-bold text-base text-amber-300 w-5 text-center">2</span>
-              <button type="button" onclick="changeTicketCount(1)" class="w-8 h-8 rounded-lg bg-theatre-800 hover:bg-theatre-700 text-white font-bold text-sm flex items-center justify-center border border-theatre-700">
-                +
-              </button>
-            </div>
-          </div>
-
-          <div class="pt-2 border-t border-theatre-800 flex items-center justify-between text-xs">
-            <span class="text-slate-400">Итоговая стоимость:</span>
-            <span id="modalTotalPrice" class="font-display font-bold text-amber-400 text-base">1 800 ₽</span>
-          </div>
-        </div>
-
-        <form onsubmit="handleModalSubmit(event)" class="space-y-3.5">
-          <div>
-            <label class="block text-xs text-slate-300 mb-1">Ваше имя</label>
-            <input required type="text" id="modalName" placeholder="Как вас зовут?" class="w-full px-4 py-2.5 rounded-xl bg-theatre-850 border border-theatre-750 text-slate-100 text-xs sm:text-sm focus:outline-none focus:border-amber-400" />
-          </div>
-
-          <div>
-            <label class="block text-xs text-slate-300 mb-1">Номер телефона</label>
-            <input required type="tel" id="modalPhone" placeholder="+7 (999) 000-00-00" class="w-full px-4 py-2.5 rounded-xl bg-theatre-850 border border-theatre-750 text-slate-100 text-xs sm:text-sm focus:outline-none focus:border-amber-400" />
-          </div>
-
-          <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-bold text-xs sm:text-sm shadow-lg shadow-amber-500/30 transition-all border border-amber-300">
-            Подтвердить бронирование
+        <!-- Modal Card: mx-auto and my-auto guarantee perfect symmetrical centering -->
+        <div class="relative w-full max-w-md sm:max-w-lg mx-auto my-auto rounded-3xl bg-theatre-900 border-2 border-theatre-700/90 p-5 sm:p-7 shadow-2xl space-y-4 text-left box-border">
+          
+          <!-- Close Button -->
+          <button type="button" onclick="closeBookingModal()" aria-label="Закрыть окно" class="absolute top-4 right-4 text-slate-400 hover:text-white p-2 rounded-xl hover:bg-theatre-800 transition-colors z-20">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
           </button>
-        </form>
 
+          <div class="space-y-1 pr-8">
+            <span class="text-xs text-amber-400 font-semibold uppercase tracking-wider font-hand text-base">Бронирование билетов</span>
+            <h3 id="modalPerformanceTitle" class="font-display text-lg sm:text-2xl font-bold text-white break-words">
+              Спектакль «Домовой»
+            </h3>
+            <p id="modalPerformanceDate" class="text-xs text-slate-300">
+              Показ: 15 ноября (Сб) в 16:00
+            </p>
+          </div>
+
+          <!-- Ticket Counter -->
+          <div class="p-3.5 sm:p-4 rounded-2xl bg-theatre-950 border border-theatre-800 space-y-3">
+            <div class="flex items-center justify-between gap-2">
+              <div class="min-w-0">
+                <div class="text-xs font-semibold text-slate-200">Количество мест</div>
+                <div class="text-[11px] text-slate-400 truncate">Свободная рассадка в зале на 40 мест</div>
+              </div>
+              
+              <div class="flex items-center gap-2.5 shrink-0">
+                <button type="button" onclick="changeTicketCount(-1)" class="w-8 h-8 rounded-lg bg-theatre-800 hover:bg-theatre-700 text-white font-bold text-sm flex items-center justify-center border border-theatre-700 active:scale-95 transition-transform">
+                  -
+                </button>
+                <span id="ticketCountDisplay" class="font-display font-bold text-base text-amber-300 w-5 text-center">2</span>
+                <button type="button" onclick="changeTicketCount(1)" class="w-8 h-8 rounded-lg bg-theatre-800 hover:bg-theatre-700 text-white font-bold text-sm flex items-center justify-center border border-theatre-700 active:scale-95 transition-transform">
+                  +
+                </button>
+              </div>
+            </div>
+
+            <div class="pt-2 border-t border-theatre-800 flex items-center justify-between text-xs">
+              <span class="text-slate-400">Итоговая стоимость:</span>
+              <span id="modalTotalPrice" class="font-display font-bold text-amber-400 text-base">1 800 ₽</span>
+            </div>
+          </div>
+
+          <form onsubmit="handleModalSubmit(event)" class="space-y-3.5">
+            <div>
+              <label class="block text-xs text-slate-300 mb-1">Ваше имя</label>
+              <input required type="text" id="modalName" placeholder="Как вас зовут?" class="w-full px-3.5 py-2.5 rounded-xl bg-theatre-850 border border-theatre-750 text-slate-100 text-xs sm:text-sm focus:outline-none focus:border-amber-400 box-border" />
+            </div>
+
+            <div>
+              <label class="block text-xs text-slate-300 mb-1">Номер телефона</label>
+              <input required type="tel" id="modalPhone" placeholder="+7 (999) 000-00-00" class="w-full px-3.5 py-2.5 rounded-xl bg-theatre-850 border border-theatre-750 text-slate-100 text-xs sm:text-sm focus:outline-none focus:border-amber-400 box-border" />
+            </div>
+
+            <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-bold text-xs sm:text-sm shadow-lg shadow-amber-500/30 transition-all border border-amber-300 active:translate-y-0.5">
+              Подтвердить бронирование
+            </button>
+          </form>
+
+        </div>
       </div>
     </div>
 
@@ -1260,7 +1268,15 @@
 
       function toggleMobileMenu() {
         const menu = document.getElementById('mobileMenu');
+        const icon = document.getElementById('menuIcon');
         menu.classList.toggle('hidden');
+        if (icon) {
+          if (menu.classList.contains('hidden')) {
+            icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 6h16M4 12h16M4 18h16"/>';
+          } else {
+            icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M6 18L18 6M6 6l12 12"/>';
+          }
+        }
       }
       document.getElementById('mobileMenuBtn').addEventListener('click', toggleMobileMenu);
 
@@ -1296,14 +1312,20 @@
 
         const modal = document.getElementById('bookingModal');
         modal.classList.remove('hidden');
-        document.body.classList.add('overflow-hidden');
+        document.body.style.overflow = 'hidden';
       }
 
       function closeBookingModal() {
         const modal = document.getElementById('bookingModal');
         modal.classList.add('hidden');
-        document.body.classList.remove('overflow-hidden');
+        document.body.style.overflow = '';
       }
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          closeBookingModal();
+        }
+      });
 
       function changeTicketCount(delta) {
         currentTicketCount = Math.max(1, Math.min(10, currentTicketCount + delta));
