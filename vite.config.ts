@@ -1,17 +1,12 @@
-import tailwindcss from '@tailwindcss/vite';
-import react from '@vitejs/plugin-react';
 import path from 'path';
-import {defineConfig} from 'vite';
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react' // или другой плагин, если используется
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import tailwindcss from '@tailwindcss/vite';
 
 // https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
-  base: '/na_krayu_sveta/', // Обязательно с косыми чертами с обеих сторон
-})
 export default defineConfig(() => {
   return {
+    base: '/na_krayu_sveta/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
