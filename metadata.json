@@ -1,0 +1,6 @@
+{
+  "name": "Театр клоунады «На краю света»",
+  "description": "Теплый и сказочный театр клоунады в Нижнем Новгороде. Дом внутреннего ребенка, спектакли для всей семьи, студия и праздники.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
